@@ -12,7 +12,7 @@ import {
 import { useRouter } from "next/navigation";
 
 
-function Header() {
+function HeaderYr() {
   const [license, setLicense] = useState("all");
   const [contentType, setContentType] = useState("all") ;
   const router = useRouter();
@@ -52,4 +52,4 @@ function Header() {
   )
 }
 
-export default Header
+export default HeaderYr
