@@ -1,6 +1,8 @@
 import HeaderYr from "@/components/HeaderYr"
 import ListWeather from "@/components/ListWeather"
 
+
+
 type PageProps = {
   params: {
     id: string
@@ -21,9 +23,10 @@ const fetchPlaces = async ({id}: any) => {
 async function MySpotPage({params: {id}}: PageProps) {
   const mySpot = await fetchPlaces({id});
   
+
   let feedback = "not working";
   if(mySpot.status == "ZERO_RESULTS") {
-     feedback = "Can not find any place for you"
+    feedback="Not working...."
      
   } else {
      feedback = "Showing results for:"
@@ -33,7 +36,7 @@ async function MySpotPage({params: {id}}: PageProps) {
     <div className="text-center">
     <HeaderYr />
         <div>{feedback} {mySpot?.results[0]?.formatted_address} </div>
-        <ListWeather lat={mySpot?.results[0]?.geometry.location.lat} lng={mySpot?.results[0]?.geometry.location.lng} />
+        <ListWeather status={mySpot.status} lat={mySpot?.results[0]?.geometry.location.lat} lng={mySpot?.results[0]?.geometry.location.lng} />
            
     </div>
   )

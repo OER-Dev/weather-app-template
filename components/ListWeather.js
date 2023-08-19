@@ -1,3 +1,4 @@
+
 import Windfrom from "@/components/Windfrom"
 import WindSpeed from "@/components/WindSpeed"
 import Time from "@/components/Time"
@@ -6,6 +7,7 @@ import Humidity from "@/components/Humidity"
 import RainNextHours from "@/components/RainNextHours"
 import { Card, Metric, Text } from "@tremor/react"
 
+
 const fetchYr = async ({lat, lng}) => {
     const res = await fetch(`https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=${lat}&lon=${lng}`);
     const list = await res.json();
@@ -13,8 +15,10 @@ const fetchYr = async ({lat, lng}) => {
   
   } 
 
-async function ListWeather({lat, lng}) {
+async function ListWeather({status, lat, lng}) {
     const yr = await fetchYr({lat, lng}); 
+  
+
     return (
         <div className="text-center ">
         <div className="p-2 items-center">
