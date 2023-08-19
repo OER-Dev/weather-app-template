@@ -4,7 +4,7 @@ function RainNextHours({symbol, precipitation_amount, duration, unit}) {
   return (
     <div className=" text-white items-center "> 
       
-      <img className="h-25 w-25 pb-2 pt-1" src={`http://localhost:3000/weather/svg/${symbol}.svg`} alt={precipitation_amount}/> 
+      <img className="h-25 w-25 pb-2 pt-1" src={`/weather/svg/${symbol}.svg`} alt={precipitation_amount}/> 
       <h4 className="text-white">Hidsafdsfadsfdafds</h4>
      
     </div>
