@@ -1,6 +1,7 @@
 import HeaderYr from "@/components/HeaderYr";
 import ListWeather from "@/components/ListWeather";
 import Image from "next/image";
+import {Text} from "@tremor/react";
 
 
 type PageProps = {
@@ -25,26 +26,26 @@ async function MySpotPage({params: {id}}: PageProps) {
   
   let feedback = "not working";
   if(mySpot.status == "ZERO_RESULTS") {
-    feedback=`Oops, we could not find ${id}....`
+    feedback=`Oops, we could not find ${id}, try again.`
     return (
       <div className="flex flex-col text-center items-center">
           <div className="flex-1">
             <HeaderYr />
           </div>
           
-          <div>{feedback}</div>
+          <Text>{feedback}</Text>
           <div className="items-center">
             <Image className="object-contain" src="/404.svg" width={600} height={600} alt="404 illustration" />
           </div>
       </div>
     )    
   } else {
-     feedback = "Showing results for:"
+     feedback = ""
      return (
     
       <div className="text-center">
       <HeaderYr />
-          <div>{feedback} {mySpot?.results[0]?.formatted_address} </div>
+          <Text className="pl-2 pr-2">{feedback} {mySpot?.results[0]?.formatted_address} </Text>
           <ListWeather status={mySpot.status} lat={mySpot?.results[0]?.geometry.location.lat} lng={mySpot?.results[0]?.geometry.location.lng} />
       </div>
     )
