@@ -11,7 +11,7 @@ function Time({time}) {
   const datePices = dateArray[0].split("-")
 
   return (
-    <div className="text-blue-500">{datePices[2]}.{datePices[1]}.{datePices[0]} {hour}</div>
+    <div className="">{datePices[2]}.{datePices[1]}.{datePices[0]} {hour}</div>
   )
 }
 

@@ -24,12 +24,12 @@ async function MySpotPage({params: {id}}: PageProps) {
   let feedback = "not working";
   if(mySpot.status == "ZERO_RESULTS") {
      feedback = "Can not find any place for you"
+     
   } else {
      feedback = "Showing results for:"
   }
   
   return (
-    
     <div className="text-center">
     <HeaderYr />
         <div>{feedback} {mySpot?.results[0]?.formatted_address} </div>

@@ -5,7 +5,7 @@ function Windfrom({wind_from_direction, unit}) {
   let wind = Number(wind_from_direction);
   wind = wind + 1;
   return (
-    <div>Wind from: {wind_from_direction} {unit}</div>
+    <div className="">Wind from: {wind_from_direction} {unit}</div>
   )
 }
 
