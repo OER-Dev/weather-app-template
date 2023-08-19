@@ -23,13 +23,14 @@ const fetchPlaces = async ({id}: any) => {
 async function MySpotPage({params: {id}}: PageProps) {
   const mySpot = await fetchPlaces({id});
   
-
   let feedback = "not working";
   if(mySpot.status == "ZERO_RESULTS") {
     feedback=`Oops, we could not find ${id}....`
     return (
       <div className="flex flex-col text-center items-center">
-          <div className="flex-1"><HeaderYr /></div>
+          <div className="flex-1">
+            <HeaderYr />
+          </div>
           
           <div>{feedback}</div>
           <div className="items-center">
