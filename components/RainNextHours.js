@@ -1,12 +1,10 @@
-import Image from "next"
+import Image from "next/image";
+
 //Rain next {duration}: {precipitation_amount} {unit}
 function RainNextHours({symbol, precipitation_amount, duration, unit}) {
   return (
     <div className=" text-white items-center "> 
-      
-      <img className="h-25 w-25 pb-2 pt-1" src={`/weather/svg/${symbol}.svg`} alt={precipitation_amount}/> 
-      <h4 className="text-white">Hidsafdsfadsfdafds</h4>
-     
+      <Image className="pb-1 pt-1" height={180} width={180} src={`/weather/svg/${symbol}.svg`} alt={precipitation_amount}/> 
     </div>
   )
 }

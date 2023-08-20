@@ -1,4 +1,4 @@
-"use client"
+
 import Windfrom from "@/components/Windfrom"
 import WindSpeed from "@/components/WindSpeed"
 import Time from "@/components/Time"
