@@ -10,6 +10,7 @@ import {
   SelectItem,
 } from "@tremor/react";
 import { useRouter } from "next/navigation";
+import { Title } from "@tremor/react";
 
 
 function HeaderYr() {
@@ -22,7 +23,7 @@ function HeaderYr() {
      <header className="max-w-3xl mx-auto pb-5 pl-2 pr-2"> 
       <div className="w-full md:max-w-2xl">
         <Link href="/">
-          <h1 className="text-center pb-5 pt-8">Check the weather at your spot</h1>
+          <Title className="text-center pb-5 pt-8">Check the weather</Title>
         </Link>
       </div>
       <div className="w-full md:max-w-2xl">
@@ -40,7 +41,7 @@ function HeaderYr() {
           <div className="flex items-center gap-2 w-full  ">
             <div className="flex items-center space-x-2 bg-white shadow-xl rounded-full border-0 px-6 py-4 flex-1">
               
-              <input type="text" name="searchTerm" placeholder="Search..." className="outline-none flex-1"/>
+              <input type="text" name="searchTerm" placeholder="Find your place..." className="outline-none flex-1"/>
             </div>
             <SearchButton />
           </div>
