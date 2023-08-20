@@ -1,4 +1,4 @@
-
+"use client"
 import Windfrom from "@/components/Windfrom"
 import WindSpeed from "@/components/WindSpeed"
 import Time from "@/components/Time"
@@ -9,7 +9,8 @@ import { Card, Metric, Text } from "@tremor/react"
 
 
 const fetchYr = async ({lat, lng}) => {
-    const res = await fetch(`https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=${lat}&lon=${lng}`);
+    const res = await fetch(`https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=${lat}&lon=${lng}`, {cache: 'no-store', // Disable caching
+});
     const list = await res.json();
     return list;
   
