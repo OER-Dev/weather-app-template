@@ -18,7 +18,6 @@ const fetchYr = async ({lat, lng}) => {
 
 async function ListWeather({status, lat, lng}) {
     const yr = await fetchYr({lat, lng}); 
-  
 
     return (
         <div className="text-center ">
@@ -37,7 +36,7 @@ async function ListWeather({status, lat, lng}) {
                     <div className="flex flex-row">
                         <div>
                             
-                            <Metric color="blue">
+                            <Metric className="text-base" color="blue">
                                 <div className="pt-1 pl-2">
                                     <AirTemperature unit={yr.properties?.meta.units.air_temperature} air_temperature={res.data.instant.details.air_temperature}/>
                                 </div>

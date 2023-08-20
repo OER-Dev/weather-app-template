@@ -42,7 +42,6 @@ async function MySpotPage({params: {id}}: PageProps) {
   } else {
      feedback = ""
      return (
-    
       <div className="text-center">
       <HeaderYr />
           <Text className="pl-2 pr-2">{feedback} {mySpot?.results[0]?.formatted_address} </Text>

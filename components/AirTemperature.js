@@ -1,8 +1,12 @@
-
+import { WiCelsius } from "react-icons/wi";
 
   function AirTemperature({air_temperature, unit}) {
     return (
-      <div>{air_temperature} {unit}</div>
+      <div className="flex flex-row">
+        <div className="pt-1">{air_temperature} </div>
+        <div className=""><WiCelsius size={50}/></div>
+      </div>
+      
     )
   }
   
