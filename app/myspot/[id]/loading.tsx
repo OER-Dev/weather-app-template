@@ -9,8 +9,8 @@ function loading() {
         <HeaderYr />
         
         <div className="w-full pb-5 content-center ">  
-            <h2 className="">Loading....</h2>
-            <div className="flex items-center justify-center p-6">
+            <h2 className="pb-1 pt-3 items-center">Loading....</h2>
+            <div className="flex items-center justify-center p-2">
                 <ThreeDots 
                     height="80" 
                     width="80" 
