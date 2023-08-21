@@ -1,11 +1,28 @@
+"use client"
 import HeaderYr from "@/components/HeaderYr"
+import { ThreeDots } from "react-loader-spinner"
 
 function loading() {
   return (
     
-    <div className="max-w-3xl mx-auto pb-5 text-center">
+    <div className="max-w-3xl mx-auto pb-5 text-center items-center">
         <HeaderYr />
-        <h2 className="max-w-3xl mx-auto pb-5 pl-2 pr-2 text-center">Loading..... </h2>
+        
+        <div className="w-full pb-5 content-center ">  
+            <h2 className="">Loading....</h2>
+            <div className="flex items-center justify-center p-6">
+                <ThreeDots 
+                    height="80" 
+                    width="80" 
+                    radius="9"
+                    color="#4fa94d" 
+                    ariaLabel="three-dots-loading"
+                    wrapperStyle={{}}
+                    visible={true}
+                />     
+            </div>
+                
+        </div>
 
     </div>
   )
