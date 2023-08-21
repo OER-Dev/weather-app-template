@@ -28,7 +28,7 @@ async function MySpotPage({params: {id}}: PageProps) {
   if(mySpot.status == "ZERO_RESULTS") {
     feedback=`Oops, we could not find ${id}, try again.`
     return (
-      <div className="flex flex-col text-center items-center">
+      <div className="max-w-3xl mx-auto pb-5 text-center">
           <div className="flex-1">
             <HeaderYr />
           </div>
@@ -42,7 +42,7 @@ async function MySpotPage({params: {id}}: PageProps) {
   } else {
      feedback = ""
      return (
-      <div className="max-w-3xl mx-auto pb-5 pl-2 pr-2 text-center">
+      <div className="max-w-3xl mx-auto pb-5 text-center">
       <HeaderYr />
           <Text className="pl-2 pr-2">{feedback} {mySpot?.results[0]?.formatted_address} </Text>
           <ListWeather status={mySpot.status} lat={mySpot?.results[0]?.geometry.location.lat} lng={mySpot?.results[0]?.geometry.location.lng} />
