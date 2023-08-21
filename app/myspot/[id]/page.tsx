@@ -42,7 +42,7 @@ async function MySpotPage({params: {id}}: PageProps) {
   } else {
      feedback = ""
      return (
-      <div className="text-center">
+      <div className="max-w-3xl mx-auto pb-5 pl-2 pr-2 text-center">
       <HeaderYr />
           <Text className="pl-2 pr-2">{feedback} {mySpot?.results[0]?.formatted_address} </Text>
           <ListWeather status={mySpot.status} lat={mySpot?.results[0]?.geometry.location.lat} lng={mySpot?.results[0]?.geometry.location.lng} />

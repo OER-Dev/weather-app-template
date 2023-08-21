@@ -20,13 +20,13 @@ function HeaderYr() {
 
   return (
      
-     <header className="max-w-3xl mx-auto pb-5 pl-2 pr-2"> 
+     <header className="pb-2 pt-2"> 
       <div className="w-full md:max-w-2xl">
         <Link href="/">
           <Title className="text-center pb-5 pt-8">Check the weather</Title>
         </Link>
       </div>
-      <div className="w-full md:max-w-2xl">
+      <div className="w-full ">
         <form action={FormData =>{
           const searchTerm = FormData.get("searchTerm");
           
@@ -41,7 +41,7 @@ function HeaderYr() {
           <div className="flex items-center gap-2 w-full  ">
             <div className="flex items-center space-x-2 bg-white shadow-xl rounded-full border-0 px-6 py-4 flex-1">
               
-              <input type="text" name="searchTerm" placeholder="Find your place..." className="outline-none flex-1"/>
+              <input type="text" name="searchTerm" placeholder="Find your spot..." className="outline-none flex-1"/>
             </div>
             <SearchButton />
           </div>
