@@ -5,7 +5,7 @@ For this project you will need a Google API key. The key needs to be injected in
 
 1. Download the code "git clone https://github.com/OER-Dev/weather-app.git"
 2. Run the following in the commandline: "npm install"
-3. create .env.local file and inject API keey
+3. create .env.local file and inject API key
 4. Run the following in the commandline to start your webserver localy: "npm run dev"
 5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
