@@ -4,9 +4,9 @@ For this project you will need a Google API key. The key needs to be injected in
 ## Getting Started
 
 1. Download the code "git clone https://github.com/OER-Dev/weather-app.git"
-2. npm install
+2. Run the following in the commandline: "npm install"
 3. create .env.local file and inject API keey
-4. npm run dev
+4. Run the following in the commandline to start your webserver localy: "npm run dev"
 5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Deploy on Vercel
